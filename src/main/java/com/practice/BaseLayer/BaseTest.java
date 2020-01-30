@@ -14,8 +14,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import javax.sound.midi.Soundbank;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -94,9 +92,14 @@ public class BaseTest {
         element.sendKeys(text);
     }
 
-    public void getAttribute(WebElement element, String text){
+    public String getAttribute(WebElement element, String attribute){
         waitforVisibility(element);
-       element.getAttribute(text);
+      return element.getAttribute(attribute);
+    }
+
+    public String getTEXT(WebElement element){
+
+       return element.getText();
     }
 
 
