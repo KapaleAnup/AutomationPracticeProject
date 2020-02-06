@@ -38,7 +38,7 @@ public class RegistrationPage extends BaseTest {
     public String enteruseremailId(String username){
 
         sendData(useremailiId, username);
-        return String.valueOf(this);
+        return useremailiId.getText();
     }
 
     public RegistrationPage enterPassword(String password){
@@ -52,13 +52,19 @@ public class RegistrationPage extends BaseTest {
         return this;
     }
 
-    public LoginPage signout(){
+    public LoginPage signout() {
+
         click(signoutbtn);
         return new LoginPage();
     }
     public String getUsername(){
-      String username =  getusername.getText();
-      return username;
+
+       return useremailiId.getText();
+    }
+
+    public String getPassowrdText(){
+        String password = userpassword.getText();
+        return password;
     }
 
     public String getErrormsg(){

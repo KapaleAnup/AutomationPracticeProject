@@ -4,11 +4,19 @@
     <listeners>
         <listener class-name="com.practice.listner.TestListner"/>
     </listeners>
-    <test thread-count="5" name="Test">
+
+    <test thread-count="5" name="PracticAutiomation">
+        <!--<groups>
+            <run>
+                <include name="smoke"/>
+                &lt;!&ndash; <include name="regression"/>&ndash;&gt;
+            </run>
+        </groups>-->
         <parameter name="browser" value="Chrome"/>
 
         <classes>
-            <class name="com.practice.tests.RegistrationTest"/>
+            <class name="com.practice.tests.LoginTest"/>
+            <class name="com.practice.tests.HomePageTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

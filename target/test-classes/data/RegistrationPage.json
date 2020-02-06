@@ -1,0 +1,20 @@
+{
+  "RegistrationDetailsWithBlankdata":{
+
+    "useremaiId":"",
+    "password":""
+  },
+
+  "BlankenailIdandvalidPassword":{
+
+    "useremaiId":"",
+    "password":"@@@@TESTUSER1234TESSETTETETTETETETTETETETETTETTETETTERERERRER"
+  },
+
+  "validemailandPassword":{
+
+    "password":"@@@@TESTUSER1234TESSETTETETTETETETTETETETETTETTETETTERERERRER"
+  }
+}
+
+

@@ -16,6 +16,7 @@ import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Properties;
 
 
@@ -23,11 +24,14 @@ public class BaseTest {
 
     protected static WebDriver driver;
     protected static Properties prop;
+
     InputStream inputStream ;
+
 
     public BaseTest(){
         prop = new Properties();
         String configfilenane = "config.properties";
+
        inputStream = getClass().getClassLoader().getResourceAsStream(configfilenane);
 
         try {

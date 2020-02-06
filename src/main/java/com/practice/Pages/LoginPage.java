@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BaseTest {
 
+    @FindBy(xpath = "//nav [@id=\"main-nav-wrap\"]//a [contains(text(),'My Account')]")
+    WebElement myaccountbtn;
+
     @FindBy(xpath = "//p[@class=\"woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide\"]//input[@id=\"username\"]")
     WebElement loginUsername;
 
@@ -18,10 +21,15 @@ public class LoginPage extends BaseTest {
     @FindBy(xpath = "//ul[@class='woocommerce-error']")
     WebElement loginpageError;
 
+
     //Error: Password is required.
     // Error: Username is required.
 
 
+    public LoginPage clickonloginButton(){
+        click(myaccountbtn);
+        return this;
+    }
     public LoginPage enterUserEmail(String emailid){
 
         sendData(loginUsername,emailid);
@@ -34,10 +42,12 @@ public class LoginPage extends BaseTest {
         return this;
     }
 
-    public LoginPage loginClick(){
+    public HomePage loginClick(){
         click(loginbtn);
-        return this;
+        return new HomePage();
     }
+
+
 
 
 }
